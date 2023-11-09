@@ -1,0 +1,148 @@
+/* import fonts */
+@import url("assets/styles/fonts.css");
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "iranYekan";
+    list-style-type: none;
+}
+/* VARIABLES */
+:root{
+    --primaryColor: #6d28d9;
+    --secondrayColor: #ddd8f1;
+    --bodyColor: #f0f0f0;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGray: #7c7c7c;
+    --mainRed: #db2777;
+    --mainSpacing: .1rem;
+    --mainTransition: all .3s linear;
+}
+body{
+    font-family: "iranYekan";
+    color: var(--mainBlack);
+    background-color:var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}               
+header{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 2px solid var(--mainGray);
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+.form-container{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.todo-continer{
+    min-width: 20rem;
+    padding: 5px;
+}
+form{
+    width: 24rem;
+    background-color:var(--mainWhite);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 5px;
+}
+form input{
+    flex: 1;
+    padding: 5px; 
+}
+
+form input, form button{
+    border: none;
+    outline: none;
+    background-color:var(--mainWhite);
+    font-size: 1rem;
+    padding: .5rem;
+}
+form button{
+    color: var(--primaryColor);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    padding: 5px;
+}
+form button:hover{
+    color: var(--mainWhite);
+    background-color: var(--primaryColor);
+}
+.todo{
+    max-width: 24rem;
+    background-color: var(--secondrayColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .3rem 0;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all .3s ease;
+}
+.todo li {
+    flex: 1;
+    font-weight: bold;
+    color: var(--primaryColor);
+}
+.todo span{
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.fa-check-square{
+    color: var(--primaryColor);
+}
+.fa-trash-alt{
+    color: var(--mainRed);
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+select{
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+    color: var(--primaryColor);
+    border-radius: 5px;
+}
+@media only screen and (max-width: 583px) {
+    .select{
+        margin-top: 10px;
+    }
+  }
+.select{
+    margin-left: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+    width: 10rem;
+    font-weight: bold;
+    position: relative;
+    border-radius: 5px;
+}
+.select::after{
+    content: "\25bc";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: var(--primaryColor);
+    pointer-events: none;
+}

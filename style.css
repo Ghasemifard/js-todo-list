@@ -125,7 +125,7 @@ select{
 }
 .select{
     margin-left: 1rem;
-    background-color: #fff;
+    background-color: #ffff;
     cursor: pointer;
     width: 10rem;
     font-weight: bold;

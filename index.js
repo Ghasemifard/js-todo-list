@@ -69,7 +69,7 @@ function filterTodos(e) {
 // Local Storage
 function saveLocalTodos(todo) {
   //add todos to local storage
-  let savedTodos = JSON.parse(localStorage.getItem("todos"));
+  let savedTodos = JSON.parse(localStorage.getItem("todos"))||[] ;
 
   savedTodos.push(todo);
   localStorage.setItem("todos", JSON.stringify(savedTodos));

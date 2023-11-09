@@ -41,18 +41,18 @@ header{
     border: 2px solid var(--mainGray);
     border-radius: 10px;
     margin: 5px 5px;
+    width: 700px;
 }
 .form-container{
     display: flex;
     padding: 5px;
-    flex-wrap: wrap;
 }
 .todo-continer{
-    min-width: 20rem;
+    /* min-width: 20rem; */
     padding: 5px;
 }
 form{
-    width: 24rem;
+    width: 100%;
     background-color:var(--mainWhite);
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@ form button:hover{
     background-color: var(--primaryColor);
 }
 .todo{
-    max-width: 24rem;
+    max-width: 25rem;
     background-color: var(--secondrayColor);
     display: flex;
     justify-content: space-between;
@@ -123,11 +123,6 @@ select{
     color: var(--primaryColor);
     border-radius: 5px;
 }
-@media only screen and (max-width: 583px) {
-    .select{
-        margin-top: 10px;
-    }
-  }
 .select{
     margin-left: 1rem;
     background-color: #fff;
@@ -146,3 +141,15 @@ select{
     color: var(--primaryColor);
     pointer-events: none;
 }
+@media only screen and (max-width: 720px) {
+    .container{
+        width: 95%;
+    }
+    .form-container{
+        flex-wrap: wrap;
+    }
+    .select{
+        margin-top: 10px;
+        margin-left: unset;
+    }
+  }
